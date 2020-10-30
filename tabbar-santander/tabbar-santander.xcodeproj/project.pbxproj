@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */; };
+		B238C203254A46F9001AEBD6 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = B238C202254A46F8001AEBD6 /* invoice.json */; };
+		B238C206254A4711001AEBD6 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C205254A4711001AEBD6 /* Invoice.swift */; };
+		B26477212547864F00EBED3B /* CreditCardContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264771F2547864F00EBED3B /* CreditCardContainerCell.swift */; };
+		B26477222547864F00EBED3B /* CreditCardContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26477202547864F00EBED3B /* CreditCardContainerCell.xib */; };
+		B26477252547878600EBED3B /* cartoes.json in Resources */ = {isa = PBXBuildFile; fileRef = B26477242547878600EBED3B /* cartoes.json */; };
+		B264772925478BF900EBED3B /* CreditCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264772725478BF900EBED3B /* CreditCardCollectionCell.swift */; };
+		B264772A25478BF900EBED3B /* CreditCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B264772825478BF900EBED3B /* CreditCardCollectionCell.xib */; };
+		B264772D2547910E00EBED3B /* Cartoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264772C2547910E00EBED3B /* Cartoes.swift */; };
+		B26E321C254391370093CACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E321B254391370093CACA /* AppDelegate.swift */; };
+		B26E321E254391370093CACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E321D254391370093CACA /* SceneDelegate.swift */; };
+		B26E3220254391370093CACA /* CreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E321F254391370093CACA /* CreditCardVC.swift */; };
+		B26E3223254391370093CACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26E3221254391370093CACA /* Main.storyboard */; };
+		B26E32252543913A0093CACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26E32242543913A0093CACA /* Assets.xcassets */; };
+		B26E32282543913A0093CACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26E32262543913A0093CACA /* LaunchScreen.storyboard */; };
+		B26E3231254395EC0093CACA /* AccountBalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E3230254395EC0093CACA /* AccountBalanceVC.swift */; };
+		B26E323725439EF00093CACA /* ExtratoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323525439EF00093CACA /* ExtratoCell.swift */; };
+		B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26E323625439EF00093CACA /* ExtratoCell.xib */; };
+		B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323B2543A47E0093CACA /* Movimentacao.swift */; };
+		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceVC.swift; sourceTree = "<group>"; };
+		B238C202254A46F8001AEBD6 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
+		B238C205254A4711001AEBD6 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		B264771F2547864F00EBED3B /* CreditCardContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardContainerCell.swift; sourceTree = "<group>"; };
+		B26477202547864F00EBED3B /* CreditCardContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardContainerCell.xib; sourceTree = "<group>"; };
+		B26477242547878600EBED3B /* cartoes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cartoes.json; sourceTree = "<group>"; };
+		B264772725478BF900EBED3B /* CreditCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCollectionCell.swift; sourceTree = "<group>"; };
+		B264772825478BF900EBED3B /* CreditCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardCollectionCell.xib; sourceTree = "<group>"; };
+		B264772C2547910E00EBED3B /* Cartoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartoes.swift; sourceTree = "<group>"; };
+		B26E3218254391370093CACA /* tabbar-santander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabbar-santander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B26E321B254391370093CACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B26E321D254391370093CACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B26E321F254391370093CACA /* CreditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardVC.swift; sourceTree = "<group>"; };
+		B26E3222254391370093CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B26E32242543913A0093CACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B26E32272543913A0093CACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B26E32292543913A0093CACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B26E3230254395EC0093CACA /* AccountBalanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceVC.swift; sourceTree = "<group>"; };
+		B26E323525439EF00093CACA /* ExtratoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtratoCell.swift; sourceTree = "<group>"; };
+		B26E323625439EF00093CACA /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
+		B26E323B2543A47E0093CACA /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
+		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B26E3215254391370093CACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B238C1FC254A3B39001AEBD6 /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+				B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */,
+			);
+			path = Invoice;
+			sourceTree = "<group>";
+		};
+		B264771B2547855800EBED3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B238C1FC254A3B39001AEBD6 /* Invoice */,
+				B264771D2547859400EBED3B /* CreditCard */,
+				B264771C2547857200EBED3B /* AccountBalance */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B264771C2547857200EBED3B /* AccountBalance */ = {
+			isa = PBXGroup;
+			children = (
+				B26E323525439EF00093CACA /* ExtratoCell.swift */,
+				B26E323625439EF00093CACA /* ExtratoCell.xib */,
+				B26E3230254395EC0093CACA /* AccountBalanceVC.swift */,
+			);
+			path = AccountBalance;
+			sourceTree = "<group>";
+		};
+		B264771D2547859400EBED3B /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				B26E321F254391370093CACA /* CreditCardVC.swift */,
+				B264771F2547864F00EBED3B /* CreditCardContainerCell.swift */,
+				B26477202547864F00EBED3B /* CreditCardContainerCell.xib */,
+				B264772725478BF900EBED3B /* CreditCardCollectionCell.swift */,
+				B264772825478BF900EBED3B /* CreditCardCollectionCell.xib */,
+			);
+			path = CreditCard;
+			sourceTree = "<group>";
+		};
+		B26E320F254391370093CACA = {
+			isa = PBXGroup;
+			children = (
+				B26E321A254391370093CACA /* tabbar-santander */,
+				B26E3219254391370093CACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B26E3219254391370093CACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B26E3218254391370093CACA /* tabbar-santander.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B26E321A254391370093CACA /* tabbar-santander */ = {
+			isa = PBXGroup;
+			children = (
+				B264771B2547855800EBED3B /* Views */,
+				B26E323A2543A46A0093CACA /* Model */,
+				B26E321B254391370093CACA /* AppDelegate.swift */,
+				B26E321D254391370093CACA /* SceneDelegate.swift */,
+				B26E3221254391370093CACA /* Main.storyboard */,
+				B26E32242543913A0093CACA /* Assets.xcassets */,
+				B26E32262543913A0093CACA /* LaunchScreen.storyboard */,
+				B26E32292543913A0093CACA /* Info.plist */,
+			);
+			path = "tabbar-santander";
+			sourceTree = "<group>";
+		};
+		B26E323A2543A46A0093CACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B238C202254A46F8001AEBD6 /* invoice.json */,
+				B26477242547878600EBED3B /* cartoes.json */,
+				B26E323F2543A7EB0093CACA /* despesas.json */,
+				B26E323B2543A47E0093CACA /* Movimentacao.swift */,
+				B264772C2547910E00EBED3B /* Cartoes.swift */,
+				B238C205254A4711001AEBD6 /* Invoice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B26E3217254391370093CACA /* tabbar-santander */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B26E322C2543913A0093CACA /* Build configuration list for PBXNativeTarget "tabbar-santander" */;
+			buildPhases = (
+				B26E3214254391370093CACA /* Sources */,
+				B26E3215254391370093CACA /* Frameworks */,
+				B26E3216254391370093CACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tabbar-santander";
+			productName = "tabbar-santander";
+			productReference = B26E3218254391370093CACA /* tabbar-santander.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B26E3210254391370093CACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					B26E3217254391370093CACA = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = B26E3213254391370093CACA /* Build configuration list for PBXProject "tabbar-santander" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B26E320F254391370093CACA;
+			productRefGroup = B26E3219254391370093CACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B26E3217254391370093CACA /* tabbar-santander */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B26E3216254391370093CACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B238C203254A46F9001AEBD6 /* invoice.json in Resources */,
+				B26E32282543913A0093CACA /* LaunchScreen.storyboard in Resources */,
+				B26E32252543913A0093CACA /* Assets.xcassets in Resources */,
+				B26477222547864F00EBED3B /* CreditCardContainerCell.xib in Resources */,
+				B26E3223254391370093CACA /* Main.storyboard in Resources */,
+				B26477252547878600EBED3B /* cartoes.json in Resources */,
+				B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */,
+				B264772A25478BF900EBED3B /* CreditCardCollectionCell.xib in Resources */,
+				B26E32402543A7EB0093CACA /* despesas.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B26E3214254391370093CACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B26477212547864F00EBED3B /* CreditCardContainerCell.swift in Sources */,
+				B26E323725439EF00093CACA /* ExtratoCell.swift in Sources */,
+				B264772925478BF900EBED3B /* CreditCardCollectionCell.swift in Sources */,
+				B26E3220254391370093CACA /* CreditCardVC.swift in Sources */,
+				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
+				B26E321C254391370093CACA /* AppDelegate.swift in Sources */,
+				B26E3231254395EC0093CACA /* AccountBalanceVC.swift in Sources */,
+				B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */,
+				B26E321E254391370093CACA /* SceneDelegate.swift in Sources */,
+				B264772D2547910E00EBED3B /* Cartoes.swift in Sources */,
+				B238C206254A4711001AEBD6 /* Invoice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B26E3221254391370093CACA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B26E3222254391370093CACA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B26E32262543913A0093CACA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B26E32272543913A0093CACA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B26E322A2543913A0093CACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B26E322B2543913A0093CACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B26E322D2543913A0093CACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "tabbar-santander/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DigitalHouse.tabbar-santander";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B26E322E2543913A0093CACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "tabbar-santander/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DigitalHouse.tabbar-santander";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B26E3213254391370093CACA /* Build configuration list for PBXProject "tabbar-santander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B26E322A2543913A0093CACA /* Debug */,
+				B26E322B2543913A0093CACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B26E322C2543913A0093CACA /* Build configuration list for PBXNativeTarget "tabbar-santander" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B26E322D2543913A0093CACA /* Debug */,
+				B26E322E2543913A0093CACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B26E3210254391370093CACA /* Project object */;
+}
