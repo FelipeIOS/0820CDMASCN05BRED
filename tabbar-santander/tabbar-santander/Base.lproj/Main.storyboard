@@ -74,7 +74,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qc9-z9-M6A" id="wxH-hp-Jgc"/>
-                        <segue destination="O1H-FE-2YP" kind="show" id="P7k-IP-rbf"/>
+                        <segue destination="O1H-FE-2YP" kind="show" identifier="InvoiceVC" id="P7k-IP-rbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

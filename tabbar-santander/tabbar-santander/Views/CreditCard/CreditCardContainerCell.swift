@@ -9,12 +9,11 @@ import UIKit
 
 protocol CreditCardContainerCellDelegate: class {
     
-    func tappedCreditCard(withID: String)
+    func tappedCreditCardWith(id: String)
 }
 
 class CreditCardContainerCell: UITableViewCell {
    
-    
     weak var delegate: CreditCardContainerCellDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -59,6 +58,6 @@ extension CreditCardContainerCell: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        self.delegate?.tappedCreditCard(withID: cartoes?.cartoes[indexPath.row].id ?? "")
+        self.delegate?.tappedCreditCardWith(id: cartoes?.cartoes[indexPath.row].id ?? "")
     }
 }
