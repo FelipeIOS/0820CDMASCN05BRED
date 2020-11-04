@@ -7,29 +7,13 @@
 
 import UIKit
 
-class AccountBalanceVC: UIViewController {
-
-    @IBOutlet weak var timeLineTableView: UITableView!
-   
-    var arrayLancamentos:[LancamentoElement] = []
+class AccountBalanceController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("AccountBalanceVC----viewDidLoad")
-        // Do any additional setup after loading the view.
-        
-        self.arrayLancamentos = self.loadMovimentacoes() ?? []
-
-        self.timeLineTableView.register(UINib(nibName: "ExtratoCell", bundle: nil), forCellReuseIdentifier: "ExtratoCell")
-       
-        self.timeLineTableView.delegate = self
-        self.timeLineTableView.dataSource = self
-        self.timeLineTableView.separatorStyle = .none
-        
-    }
+    private var arrayLancamentos:[LancamentoElement] = []
     
-    private func loadMovimentacoes() -> [LancamentoElement]? {
-        
+    var teste: String = "Felipe"
+    
+    func loadLancamentos() {
         
         if let path = Bundle.main.path(forResource: "despesas", ofType: "json"){
             
@@ -41,26 +25,52 @@ class AccountBalanceVC: UIViewController {
                 
                 print("=======>movimentacao\(movimentacao)")
                 
-                return movimentacao.lancamentos
+                self.arrayLancamentos =  movimentacao.lancamentos
                 
             }catch{
                 print("Deu ruim no parse")
-                return nil
             }
-
         }
-        
-        return nil
     }
     
+    var numberOfRows: Int {
+        return self.arrayLancamentos.count
+    }
+}
 
+class AccountBalanceVC: UIViewController {
+    
+    @IBOutlet weak var timeLineTableView: UITableView!
+
+    private var controller: AccountBalanceController = AccountBalanceController()
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("AccountBalanceVC----viewDidLoad")
+        // Do any additional setup after loading the view.
+        
+        self.controller.teste = "Karen"
+        
+        self.controller.numberOfRows = 0
+        
+        self.timeLineTableView.register(UINib(nibName: "ExtratoCell", bundle: nil), forCellReuseIdentifier: "ExtratoCell")
+        
+        self.controller.loadLancamentos()
+        
+        self.timeLineTableView.delegate = self
+        self.timeLineTableView.dataSource = self
+        self.timeLineTableView.separatorStyle = .none
+        
+    }
+    
+    
 }
 
 extension AccountBalanceVC: UITableViewDelegate,  UITableViewDataSource {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.arrayLancamentos.count
+        return self.controller.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,5 +80,5 @@ extension AccountBalanceVC: UITableViewDelegate,  UITableViewDataSource {
         cell?.setup(value: self.arrayLancamentos[indexPath.row])
         return cell ?? UITableViewCell()
     }
-
+    
 }

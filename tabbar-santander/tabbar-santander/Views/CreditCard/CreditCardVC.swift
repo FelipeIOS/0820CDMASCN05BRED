@@ -40,7 +40,6 @@ class CreditCardVC: UIViewController {
     
     private func loadCreditCard() -> Cartoes? {
         
-        
         if let path = Bundle.main.path(forResource: "cartoes", ofType: "json"){
             
             do {
@@ -57,7 +56,6 @@ class CreditCardVC: UIViewController {
                 print("Deu ruim no parse")
                 return nil
             }
-
         }
         
         return nil
@@ -66,8 +64,6 @@ class CreditCardVC: UIViewController {
     @IBAction func buttonteste(_ sender: UIButton) {
         self.performSegue(withIdentifier: "teste", sender: nil)
     }
-    
-
 }
 
 
@@ -90,10 +86,7 @@ extension CreditCardVC: UITableViewDelegate, UITableViewDataSource {
         
         let vc:InvoiceVC? = segue.destination as? InvoiceVC
         vc?.cardID = sender as? String
-        
     }
-
-    
 }
 
 

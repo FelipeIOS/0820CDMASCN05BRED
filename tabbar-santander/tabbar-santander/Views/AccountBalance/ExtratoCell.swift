@@ -48,8 +48,6 @@ class ExtratoCell: UITableViewCell {
         }
     }
     
-    
-    
     func setup(value: LancamentoElement?) {
         
         if let _value = value {
