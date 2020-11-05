@@ -10,8 +10,11 @@ import UIKit
 class AccountBalanceController {
     
     private var arrayLancamentos:[LancamentoElement] = []
+    private var currentLancamentoElement: LancamentoElement?
     
-    var teste: String = "Felipe"
+    func loadCurrentLancamentoElement(index: Int) {
+        self.currentLancamentoElement = arrayLancamentos[index]
+    }
     
     func loadLancamentos() {
         
@@ -33,6 +36,10 @@ class AccountBalanceController {
         }
     }
     
+    var lancamentoElement: LancamentoElement?{
+        return self.currentLancamentoElement
+    }
+    
     var numberOfRows: Int {
         return self.arrayLancamentos.count
     }
@@ -48,10 +55,7 @@ class AccountBalanceVC: UIViewController {
         super.viewDidLoad()
         print("AccountBalanceVC----viewDidLoad")
         // Do any additional setup after loading the view.
-        
-        self.controller.teste = "Karen"
-        
-        self.controller.numberOfRows = 0
+    
         
         self.timeLineTableView.register(UINib(nibName: "ExtratoCell", bundle: nil), forCellReuseIdentifier: "ExtratoCell")
         
@@ -62,8 +66,6 @@ class AccountBalanceVC: UIViewController {
         self.timeLineTableView.separatorStyle = .none
         
     }
-    
-    
 }
 
 extension AccountBalanceVC: UITableViewDelegate,  UITableViewDataSource {
@@ -77,7 +79,9 @@ extension AccountBalanceVC: UITableViewDelegate,  UITableViewDataSource {
         
         let cell: ExtratoCell? = tableView.dequeueReusableCell(withIdentifier: "ExtratoCell", for: indexPath) as? ExtratoCell
         
-        cell?.setup(value: self.arrayLancamentos[indexPath.row])
+        self.controller.loadCurrentLancamentoElement(index: indexPath.row)
+        
+        cell?.setup(value:self.controller.lancamentoElement)
         return cell ?? UITableViewCell()
     }
     
