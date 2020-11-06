@@ -27,6 +27,7 @@
 		B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26E323625439EF00093CACA /* ExtratoCell.xib */; };
 		B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323B2543A47E0093CACA /* Movimentacao.swift */; };
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
+		B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		B26E323625439EF00093CACA /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
 		B26E323B2543A47E0093CACA /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
+		B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				B238C202254A46F8001AEBD6 /* invoice.json */,
-				B26477242547878600EBED3B /* cartoes.json */,
 				B26E323F2543A7EB0093CACA /* despesas.json */,
+				B26477242547878600EBED3B /* cartoes.json */,
 				B26E323B2543A47E0093CACA /* Movimentacao.swift */,
 				B264772C2547910E00EBED3B /* Cartoes.swift */,
 				B238C205254A4711001AEBD6 /* Invoice.swift */,
@@ -153,6 +155,7 @@
 		B2F44E3C25536EDB00EE6086 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				B26E323725439EF00093CACA /* ExtratoCell.swift in Sources */,
 				B264772925478BF900EBED3B /* CreditCardCollectionCell.swift in Sources */,
 				B26E3220254391370093CACA /* CreditCardVC.swift in Sources */,
+				B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */,
 				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
 				B26E321C254391370093CACA /* AppDelegate.swift in Sources */,
 				B26E3231254395EC0093CACA /* AccountBalanceVC.swift in Sources */,
