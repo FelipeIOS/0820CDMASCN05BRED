@@ -28,6 +28,7 @@
 		B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323B2543A47E0093CACA /* Movimentacao.swift */; };
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
 		B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */; };
+		B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5525562AF300EE6086 /* CreditCardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B26E323B2543A47E0093CACA /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
 		B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
+		B2F44E5525562AF300EE6086 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */,
+				B2F44E5525562AF300EE6086 /* CreditCardController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */,
 				B26E321E254391370093CACA /* SceneDelegate.swift in Sources */,
 				B264772D2547910E00EBED3B /* Cartoes.swift in Sources */,
+				B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */,
 				B238C206254A4711001AEBD6 /* Invoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
