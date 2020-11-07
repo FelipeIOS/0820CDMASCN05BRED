@@ -16,7 +16,12 @@ class AccountBalanceController {
         self.currentLancamentoElement = arrayLancamentos[index]
     }
     
-    func loadLancamentos() {
+    func tsste() {
+        
+        
+    }
+
+    func loadLancamentos(completionHandler: (_ result: Bool,  _ error: Error?) -> Void) {
         
         if let path = Bundle.main.path(forResource: "despesas", ofType: "json"){
             
@@ -30,7 +35,10 @@ class AccountBalanceController {
                 
                 self.arrayLancamentos =  movimentacao.lancamentos
                 
+                completionHandler(true, nil)
+                
             }catch{
+                completionHandler(false, error)
                 print("Deu ruim no parse")
             }
         }

@@ -19,15 +19,18 @@ class AccountBalanceVC: UIViewController {
         print("AccountBalanceVC----viewDidLoad")
         // Do any additional setup after loading the view.
     
-        
         self.timeLineTableView.register(UINib(nibName: "ExtratoCell", bundle: nil), forCellReuseIdentifier: "ExtratoCell")
         
-        self.controller.loadLancamentos()
+        self.controller.loadLancamentos { (result, error) in
         
-        self.timeLineTableView.delegate = self
-        self.timeLineTableView.dataSource = self
-        self.timeLineTableView.separatorStyle = .none
-        
+            if result {
+                self.timeLineTableView.delegate = self
+                self.timeLineTableView.dataSource = self
+                self.timeLineTableView.separatorStyle = .none
+            }else{
+                print("======deu erro \(error)")
+            }
+        }
     }
 }
 

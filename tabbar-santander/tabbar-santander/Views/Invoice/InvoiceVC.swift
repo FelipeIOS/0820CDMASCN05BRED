@@ -17,6 +17,7 @@ class InvoiceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         self.tableView.register(UINib(nibName: "ExtratoCell", bundle: nil), forCellReuseIdentifier: "ExtratoCell")
         
