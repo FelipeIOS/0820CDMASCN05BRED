@@ -101,7 +101,7 @@
                 <outlet property="nameLabel" destination="UPX-DR-aIb" id="im2-Ue-g6X"/>
                 <outlet property="numberLabel" destination="MpM-AO-wdF" id="qSj-yc-GdM"/>
             </connections>
-            <point key="canvasLocation" x="-10.144927536231885" y="111.83035714285714"/>
+            <point key="canvasLocation" x="220" y="122"/>
         </collectionViewCell>
     </objects>
     <resources>

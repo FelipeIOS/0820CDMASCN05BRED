@@ -44,14 +44,18 @@ class CreditCardContainerCell: UITableViewCell {
 extension CreditCardContainerCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cartoes?.cartoes.count ?? 0
+        
+        let count = self.cartoes?.cartoes.count ?? 0
+        return count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell: CreditCardCollectionCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "CreditCardCollectionCell", for: indexPath) as? CreditCardCollectionCell
-        
-        cell?.setup(value: cartoes?.cartoes[indexPath.row])
+        if indexPath.row < cartoes?.cartoes.count ?? 0 {
+            cell?.setup(value: cartoes?.cartoes[indexPath.row])
+            return cell ?? UICollectionViewCell()
+        }
         
         return cell ?? UICollectionViewCell()
     }

@@ -29,6 +29,7 @@
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
 		B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */; };
 		B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5525562AF300EE6086 /* CreditCardController.swift */; };
+		B2F44E5C2559FD4600EE6086 /* InvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
 		B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 		B2F44E5525562AF300EE6086 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
+		B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,18 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */,
+				B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */,
 			);
 			path = Invoice;
-			sourceTree = "<group>";
-		};
-		B264771B2547855800EBED3B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B238C1FC254A3B39001AEBD6 /* Invoice */,
-				B264771D2547859400EBED3B /* CreditCard */,
-				B264771C2547857200EBED3B /* AccountBalance */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		B264771C2547857200EBED3B /* AccountBalance */ = {
@@ -93,6 +86,7 @@
 				B26E323525439EF00093CACA /* ExtratoCell.swift */,
 				B26E323625439EF00093CACA /* ExtratoCell.xib */,
 				B26E3230254395EC0093CACA /* AccountBalanceVC.swift */,
+				B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */,
 			);
 			path = AccountBalance;
 			sourceTree = "<group>";
@@ -101,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B26E321F254391370093CACA /* CreditCardVC.swift */,
+				B2F44E5525562AF300EE6086 /* CreditCardController.swift */,
 				B264771F2547864F00EBED3B /* CreditCardContainerCell.swift */,
 				B26477202547864F00EBED3B /* CreditCardContainerCell.xib */,
 				B264772725478BF900EBED3B /* CreditCardCollectionCell.swift */,
@@ -128,9 +123,11 @@
 		B26E321A254391370093CACA /* tabbar-santander */ = {
 			isa = PBXGroup;
 			children = (
-				B2F44E3C25536EDB00EE6086 /* Controller */,
-				B264771B2547855800EBED3B /* Views */,
-				B26E323A2543A46A0093CACA /* Model */,
+				B29AE222255A03B200F01D85 /* CustomViews */,
+				B264771C2547857200EBED3B /* AccountBalance */,
+				B264771D2547859400EBED3B /* CreditCard */,
+				B238C1FC254A3B39001AEBD6 /* Invoice */,
+				B26E323A2543A46A0093CACA /* Models */,
 				B26E321B254391370093CACA /* AppDelegate.swift */,
 				B26E321D254391370093CACA /* SceneDelegate.swift */,
 				B26E3221254391370093CACA /* Main.storyboard */,
@@ -141,7 +138,7 @@
 			path = "tabbar-santander";
 			sourceTree = "<group>";
 		};
-		B26E323A2543A46A0093CACA /* Model */ = {
+		B26E323A2543A46A0093CACA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B238C202254A46F8001AEBD6 /* invoice.json */,
@@ -151,16 +148,14 @@
 				B264772C2547910E00EBED3B /* Cartoes.swift */,
 				B238C205254A4711001AEBD6 /* Invoice.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		B2F44E3C25536EDB00EE6086 /* Controller */ = {
+		B29AE222255A03B200F01D85 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */,
-				B2F44E5525562AF300EE6086 /* CreditCardController.swift */,
 			);
-			path = Controller;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +237,7 @@
 				B26477212547864F00EBED3B /* CreditCardContainerCell.swift in Sources */,
 				B26E323725439EF00093CACA /* ExtratoCell.swift in Sources */,
 				B264772925478BF900EBED3B /* CreditCardCollectionCell.swift in Sources */,
+				B2F44E5C2559FD4600EE6086 /* InvoiceController.swift in Sources */,
 				B26E3220254391370093CACA /* CreditCardVC.swift in Sources */,
 				B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */,
 				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
