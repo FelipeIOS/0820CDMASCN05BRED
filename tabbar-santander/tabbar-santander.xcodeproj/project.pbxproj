@@ -27,6 +27,8 @@
 		B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26E323625439EF00093CACA /* ExtratoCell.xib */; };
 		B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323B2543A47E0093CACA /* Movimentacao.swift */; };
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
+		B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */; };
+		B29AE226255A06AA00F01D85 /* ButtonCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */; };
 		B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */; };
 		B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5525562AF300EE6086 /* CreditCardController.swift */; };
 		B2F44E5C2559FD4600EE6086 /* InvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */; };
@@ -55,6 +57,8 @@
 		B26E323625439EF00093CACA /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
 		B26E323B2543A47E0093CACA /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
+		B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionCell.swift; sourceTree = "<group>"; };
+		B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCollectionCell.xib; sourceTree = "<group>"; };
 		B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 		B2F44E5525562AF300EE6086 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
 		B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 		B29AE222255A03B200F01D85 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */,
+				B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B238C203254A46F9001AEBD6 /* invoice.json in Resources */,
+				B29AE226255A06AA00F01D85 /* ButtonCollectionCell.xib in Resources */,
 				B26E32282543913A0093CACA /* LaunchScreen.storyboard in Resources */,
 				B26E32252543913A0093CACA /* Assets.xcassets in Resources */,
 				B26477222547864F00EBED3B /* CreditCardContainerCell.xib in Resources */,
@@ -247,6 +254,7 @@
 				B26E321E254391370093CACA /* SceneDelegate.swift in Sources */,
 				B264772D2547910E00EBED3B /* Cartoes.swift in Sources */,
 				B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */,
+				B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */,
 				B238C206254A4711001AEBD6 /* Invoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
