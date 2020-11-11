@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol ButtonCollectionCellDelegate: class {
+    
+    func tappedButton()
+}
+
 class ButtonCollectionCell: UICollectionViewCell {
 
+    private weak var delegate:ButtonCollectionCellDelegate?
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageButton: UIImageView!
     @IBOutlet weak var backgroundViewButton: UIView!
@@ -20,8 +26,12 @@ class ButtonCollectionCell: UICollectionViewCell {
         // Initialization code
     }
     
+    func setup(delegate:ButtonCollectionCellDelegate?) {
+        self.delegate = delegate
+    }
+    
     @IBAction func tappedButton(_ sender: UIButton) {
-   
+        self.delegate?.tappedButton()
     }
     
 }

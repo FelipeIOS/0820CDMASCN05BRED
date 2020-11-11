@@ -67,6 +67,11 @@ extension CreditCardVC: UITableViewDelegate, UITableViewDataSource {
 
 
 extension CreditCardVC: CreditCardContainerCellDelegate {
+   
+    func tappedAddCredCardButton() {
+        print("CreditCardVC===>CreditCardContainerCellDelegate===>tappedAddCredCardButton")
+        
+    }
     
     func tappedCreditCardWith(id: String) {
         

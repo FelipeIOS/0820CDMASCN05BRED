@@ -10,6 +10,7 @@ import UIKit
 protocol CreditCardContainerCellDelegate: class {
     
     func tappedCreditCardWith(id: String)
+    func tappedAddCredCardButton()
 }
 
 class CreditCardContainerCell: UITableViewCell {
@@ -34,6 +35,9 @@ class CreditCardContainerCell: UITableViewCell {
     func setup(value: Cartoes?, delegate: CreditCardContainerCellDelegate?) {
         
         self.collectionView.register(UINib(nibName: "CreditCardCollectionCell", bundle: nil), forCellWithReuseIdentifier: "CreditCardCollectionCell")
+       
+        self.collectionView.register(UINib(nibName: "ButtonCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ButtonCollectionCell")
+        
         self.cartoes = value
         self.delegate = delegate
         self.collectionView.delegate = self
@@ -56,12 +60,27 @@ extension CreditCardContainerCell: UICollectionViewDelegate, UICollectionViewDat
             cell?.setup(value: cartoes?.cartoes[indexPath.row])
             return cell ?? UICollectionViewCell()
         }
+        else {
+            
+            let cell: ButtonCollectionCell? = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonCollectionCell", for: indexPath) as? ButtonCollectionCell
+            
+            cell?.setup(delegate: self)
+            
+            return cell ?? UICollectionViewCell()
+        }
         
-        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        self.delegate?.tappedCreditCardWith(id: cartoes?.cartoes[indexPath.row].id ?? "")
+        if indexPath.row < cartoes?.cartoes.count ?? 0 {
+            self.delegate?.tappedCreditCardWith(id: cartoes?.cartoes[indexPath.row].id ?? "")
+        }
+    }
+}
+
+extension CreditCardContainerCell: ButtonCollectionCellDelegate {
+    func tappedButton() {
+        print("CreditCardContainerCell===>ButtonCollectionCellDelegate===>tappedButton")
+        self.delegate?.tappedAddCredCardButton()
     }
 }
