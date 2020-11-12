@@ -29,6 +29,8 @@
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
 		B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */; };
 		B29AE226255A06AA00F01D85 /* ButtonCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */; };
+		B29AE232255C9F0600F01D85 /* AddCreditCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */; };
+		B29AE235255C9FEE00F01D85 /* AddCreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE234255C9FEE00F01D85 /* AddCreditCardVC.swift */; };
 		B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */; };
 		B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5525562AF300EE6086 /* CreditCardController.swift */; };
 		B2F44E5C2559FD4600EE6086 /* InvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */; };
@@ -59,6 +61,8 @@
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
 		B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionCell.swift; sourceTree = "<group>"; };
 		B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCollectionCell.xib; sourceTree = "<group>"; };
+		B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCreditCard.storyboard; sourceTree = "<group>"; };
+		B29AE234255C9FEE00F01D85 /* AddCreditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardVC.swift; sourceTree = "<group>"; };
 		B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 		B2F44E5525562AF300EE6086 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
 		B2F44E5B2559FD4600EE6086 /* InvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		B26E321A254391370093CACA /* tabbar-santander */ = {
 			isa = PBXGroup;
 			children = (
+				B29AE237255C9FF500F01D85 /* AddCreditCardVC */,
 				B29AE222255A03B200F01D85 /* CustomViews */,
 				B264771C2547857200EBED3B /* AccountBalance */,
 				B264771D2547859400EBED3B /* CreditCard */,
@@ -135,6 +140,7 @@
 				B26E321B254391370093CACA /* AppDelegate.swift */,
 				B26E321D254391370093CACA /* SceneDelegate.swift */,
 				B26E3221254391370093CACA /* Main.storyboard */,
+				B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */,
 				B26E32242543913A0093CACA /* Assets.xcassets */,
 				B26E32262543913A0093CACA /* LaunchScreen.storyboard */,
 				B26E32292543913A0093CACA /* Info.plist */,
@@ -162,6 +168,14 @@
 				B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B29AE237255C9FF500F01D85 /* AddCreditCardVC */ = {
+			isa = PBXGroup;
+			children = (
+				B29AE234255C9FEE00F01D85 /* AddCreditCardVC.swift */,
+			);
+			path = AddCreditCardVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,7 @@
 				B26477222547864F00EBED3B /* CreditCardContainerCell.xib in Resources */,
 				B26E3223254391370093CACA /* Main.storyboard in Resources */,
 				B26477252547878600EBED3B /* cartoes.json in Resources */,
+				B29AE232255C9F0600F01D85 /* AddCreditCard.storyboard in Resources */,
 				B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */,
 				B264772A25478BF900EBED3B /* CreditCardCollectionCell.xib in Resources */,
 				B26E32402543A7EB0093CACA /* despesas.json in Resources */,
@@ -248,6 +263,7 @@
 				B26E3220254391370093CACA /* CreditCardVC.swift in Sources */,
 				B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */,
 				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
+				B29AE235255C9FEE00F01D85 /* AddCreditCardVC.swift in Sources */,
 				B26E321C254391370093CACA /* AppDelegate.swift in Sources */,
 				B26E3231254395EC0093CACA /* AccountBalanceVC.swift in Sources */,
 				B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */,

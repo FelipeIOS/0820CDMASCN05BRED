@@ -75,6 +75,7 @@
                     <connections>
                         <outlet property="tableView" destination="qc9-z9-M6A" id="wxH-hp-Jgc"/>
                         <segue destination="O1H-FE-2YP" kind="show" identifier="InvoiceVC" id="P7k-IP-rbf"/>
+                        <segue destination="JNj-Pt-3zG" kind="presentation" identifier="AddCreditCardVC" id="BrQ-Ui-41W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -111,6 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGr-BD-yMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3217" y="69"/>
+        </scene>
+        <!--AddCreditCard-->
+        <scene sceneID="LbL-nT-PGR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCreditCard" id="JNj-Pt-3zG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebD-Ni-JMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3034" y="-402"/>
         </scene>
         <!--Cartões-->
         <scene sceneID="vbx-T6-mwB">

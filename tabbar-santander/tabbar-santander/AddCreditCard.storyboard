@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LUM-E9-EWn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Credit CardVC-->
+        <scene sceneID="hfH-WF-yMh">
+            <objects>
+                <viewController id="LUM-E9-EWn" customClass="AddCreditCardVC" customModule="tabbar_santander" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wXg-9T-1VI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-Sz-Hlf">
+                                <rect key="frame" x="20" y="378" width="374" height="46"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="KXR-yE-YcZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <state key="normal" title="Foto">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPhotoButton:" destination="LUM-E9-EWn" eventType="touchUpInside" id="mXd-ZP-QDU"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="vOB-4I-zUC">
+                                <rect key="frame" x="20" y="100" width="374" height="229"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q9L-YX-pca">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xhs-yl-fzQ">
+                                        <rect key="frame" x="0.0" y="66" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mon-KB-66s">
+                                        <rect key="frame" x="0.0" y="132" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6LX-sM-ICf">
+                                        <rect key="frame" x="0.0" y="198" width="374" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <segments>
+                                            <segment title="Visa"/>
+                                            <segment title="Master"/>
+                                            <segment title="Elo"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="tappedSelectFlagSegmented:" destination="LUM-E9-EWn" eventType="valueChanged" id="416-10-3Fm"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lV-7z-RKV">
+                                <rect key="frame" x="20" y="444" width="374" height="46"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="YKM-FD-3JE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="18"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedSaveButton:" destination="LUM-E9-EWn" eventType="touchUpInside" id="W4v-N2-6gN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z7f-Uo-fhH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7lV-7z-RKV" firstAttribute="top" secondItem="ICJ-Sz-Hlf" secondAttribute="bottom" constant="20" id="Cu9-Pi-AOR"/>
+                            <constraint firstItem="7lV-7z-RKV" firstAttribute="leading" secondItem="Z7f-Uo-fhH" secondAttribute="leading" constant="20" id="DIJ-Zr-4Jy"/>
+                            <constraint firstItem="Z7f-Uo-fhH" firstAttribute="trailing" secondItem="vOB-4I-zUC" secondAttribute="trailing" constant="20" id="SNR-K6-AWf"/>
+                            <constraint firstItem="vOB-4I-zUC" firstAttribute="leading" secondItem="Z7f-Uo-fhH" secondAttribute="leading" constant="20" id="Tpr-IS-dE7"/>
+                            <constraint firstItem="ICJ-Sz-Hlf" firstAttribute="top" secondItem="vOB-4I-zUC" secondAttribute="bottom" constant="49" id="Wf5-rT-kp1"/>
+                            <constraint firstItem="ICJ-Sz-Hlf" firstAttribute="leading" secondItem="Z7f-Uo-fhH" secondAttribute="leading" constant="20" id="eJP-mG-tQJ"/>
+                            <constraint firstItem="Z7f-Uo-fhH" firstAttribute="trailing" secondItem="ICJ-Sz-Hlf" secondAttribute="trailing" constant="20" id="jiW-B5-6V5"/>
+                            <constraint firstItem="vOB-4I-zUC" firstAttribute="top" secondItem="Z7f-Uo-fhH" secondAttribute="top" constant="56" id="s9l-5t-zIM"/>
+                            <constraint firstItem="Z7f-Uo-fhH" firstAttribute="trailing" secondItem="7lV-7z-RKV" secondAttribute="trailing" constant="20" id="yzB-f9-dhj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="Mon-KB-66s" id="kJI-jE-5VG"/>
+                        <outlet property="flagSegmented" destination="6LX-sM-ICf" id="LKJ-76-u6n"/>
+                        <outlet property="nameTextField" destination="q9L-YX-pca" id="KDm-NQ-oAg"/>
+                        <outlet property="numberCardTextField" destination="xhs-yl-fzQ" id="g7b-EI-TKQ"/>
+                        <outlet property="photoButton" destination="ICJ-Sz-Hlf" id="nXz-JW-Dmq"/>
+                        <outlet property="saveButton" destination="7lV-7z-RKV" id="3e7-0V-lPo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucT-C0-jYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

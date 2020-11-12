@@ -35,7 +35,7 @@ class CreditCardCollectionCell: UICollectionViewCell {
             self.cardBackgroundImageView.layer.cornerRadius = 4
             
             self.containerView.layer.cornerRadius = 4
-            if _value.bandeira == "mastercard" {
+            if _value.bandeira == Flag.mastercard.rawValue {
                 self.containerView.backgroundColor = .black
                 self.nameLabel.textColor = .lightGray
                 self.numberLabel.textColor = .lightGray

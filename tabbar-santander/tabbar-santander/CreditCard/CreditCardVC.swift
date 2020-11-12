@@ -60,8 +60,10 @@ extension CreditCardVC: UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let vc:InvoiceVC? = segue.destination as? InvoiceVC
-        vc?.setup(cardID: sender as? String)
+        if segue.identifier == "InvoiceVC" {
+            let vc:InvoiceVC? = segue.destination as? InvoiceVC
+            vc?.setup(cardID: sender as? String)
+        }
     }
 }
 
@@ -69,6 +71,8 @@ extension CreditCardVC: UITableViewDelegate, UITableViewDataSource {
 extension CreditCardVC: CreditCardContainerCellDelegate {
    
     func tappedAddCredCardButton() {
+        
+        self.performSegue(withIdentifier: "AddCreditCardVC", sender: nil)
         print("CreditCardVC===>CreditCardContainerCellDelegate===>tappedAddCredCardButton")
         
     }
