@@ -34,9 +34,16 @@ class AddCreditCardVC: UIViewController {
         self.numberCardTextField.delegate = self
         self.dateTextField.delegate = self
         
-    
+        self.configScreen()
         // Do any additional setup after loading the view.
     }
+    
+    private func configScreen() {
+        
+        self.saveButton.layer.cornerRadius = 4
+        self.photoButton.layer.cornerRadius = 4
+    }
+    
     @IBAction func tappedSelectFlagSegmented(_ sender: UISegmentedControl) {
     }
     
