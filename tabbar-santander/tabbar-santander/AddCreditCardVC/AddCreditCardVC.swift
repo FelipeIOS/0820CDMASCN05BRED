@@ -33,14 +33,17 @@ class AddCreditCardVC: UIViewController {
         self.nameTextField.delegate = self
         self.numberCardTextField.delegate = self
         self.dateTextField.delegate = self
+        
+    
         // Do any additional setup after loading the view.
     }
     @IBAction func tappedSelectFlagSegmented(_ sender: UISegmentedControl) {
     }
     
     @IBAction func tappedPhotoButton(_ sender: UIButton) {
+     
     }
-    
+
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         
         if self.checkFields(){
