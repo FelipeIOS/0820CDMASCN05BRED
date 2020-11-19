@@ -28,14 +28,73 @@ class AddCreditCardVC: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     
+    private var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configDelegates()
         self.configLayoutScreen()
-        
+        self.configDatePicker()
     
         // Do any additional setup after loading the view.
+    }
+    
+    private func configDatePicker() {
+        self.datePicker = UIDatePicker()
+        
+        self.datePicker.datePickerMode = .date
+        
+        if #available(iOS 13.4, *) {
+            self.datePicker.preferredDatePickerStyle = .wheels
+        }
+        
+        self.datePicker.backgroundColor = UIColor.red
+        self.datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        
+        let localizacao = Locale(identifier: "pt_BR")
+        self.datePicker.locale = localizacao
+        
+        let currentDate = Date()
+        self.datePicker.minimumDate = currentDate
+        self.datePicker.maximumDate = Calendar.current.date(byAdding: .year, value: 5, to: currentDate)
+        
+        self.dateTextField.inputView = self.datePicker
+        
+        self.configToolBar()
+    }
+    
+    private func configToolBar() {
+        let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        toolbar.tintColor = UIColor.black
+        toolbar.backgroundColor = UIColor.red
+        toolbar.sizeToFit()
+        
+        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(cancelClick))
+        
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let doneButton = UIBarButtonItem(title: "Pronto", style: .plain, target: self, action: #selector(doneClick))
+        
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        
+        self.dateTextField.inputAccessoryView = toolbar
+    }
+    
+    @objc private func cancelClick() {
+        self.dateTextField.resignFirstResponder()
+    }
+    
+    @objc private func doneClick() {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        self.dateTextField.text = dateFormatter.string(from: self.datePicker.date)
+        self.dateTextField.resignFirstResponder()
     }
     
     private func configDelegates() {
