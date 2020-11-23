@@ -29,7 +29,7 @@ enum Flag: String {
 
 struct Cartoes: Codable {
     
-    let cartoes:[CartoesElement]
+    var cartoes:[CartoesElement]
 }
 
 struct CartoesElement: Codable {

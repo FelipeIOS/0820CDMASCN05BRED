@@ -8,6 +8,11 @@
 import UIKit
 
 
+enum DateEnum: Int {
+    case month = 0
+    case year = 1
+}
+
 protocol AddCreditCardVCDelegte: class {
     
     func success(value: CartoesElement?)
@@ -28,38 +33,42 @@ class AddCreditCardVC: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     
-    private var datePicker: UIDatePicker!
+    private var controller: AddCreditCardController = AddCreditCardController()
+    
+    
+    private var dateView: UIPickerView?
+    private var months: [String] = Calendar.current.monthSymbols
+    private var years: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configDelegates()
         self.configLayoutScreen()
-        self.configDatePicker()
+        self.configDateView()
     
+        self.loadYears()
         // Do any additional setup after loading the view.
     }
     
-    private func configDatePicker() {
-        self.datePicker = UIDatePicker()
-        
-        self.datePicker.datePickerMode = .date
-        
-        if #available(iOS 13.4, *) {
-            self.datePicker.preferredDatePickerStyle = .wheels
-        }
-        
-        self.datePicker.backgroundColor = UIColor.red
-        self.datePicker.setValue(UIColor.white, forKeyPath: "textColor")
-        
-        let localizacao = Locale(identifier: "pt_BR")
-        self.datePicker.locale = localizacao
-        
+    private func loadYears() {
+       
         let currentDate = Date()
-        self.datePicker.minimumDate = currentDate
-        self.datePicker.maximumDate = Calendar.current.date(byAdding: .year, value: 5, to: currentDate)
+        let calendar = Calendar.current
+        let currentYear = calendar.component(.year, from: currentDate)
+        self.years = (currentYear...2100).map { String($0) }
         
-        self.dateTextField.inputView = self.datePicker
+    }
+    
+    private func configDateView() {
+        self.dateView = UIPickerView()
+        
+        self.dateView?.delegate = self
+    
+        self.dateView?.backgroundColor = UIColor.red
+        self.dateView?.setValue(UIColor.white, forKeyPath: "textColor")
+        self.dateTextField.inputView = self.dateView
+        
         
         self.configToolBar()
     }
@@ -89,11 +98,7 @@ class AddCreditCardVC: UIViewController {
     }
     
     @objc private func doneClick() {
-        let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        
-        self.dateTextField.text = dateFormatter.string(from: self.datePicker.date)
         self.dateTextField.resignFirstResponder()
     }
     
@@ -137,7 +142,10 @@ class AddCreditCardVC: UIViewController {
             
             let button = UIAlertAction(title: "OK", style: .default) { (success) in
                
-                self.delegate?.success(value: self.saveCreditCard())
+                self.controller.saveCreditCard(name: self.nameTextField.text, date: self.dateTextField.text, number: self.numberCardTextField.text, flag: self.flagSegmented.selectedSegmentIndex)
+                
+                self.delegate?.success(value: self.controller.creditCardSaved)
+               
                 self.dismiss(animated: true, completion: nil)
             }
             
@@ -155,16 +163,6 @@ class AddCreditCardVC: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    
-    private func saveCreditCard() -> CartoesElement? {
-        
-        let card: CartoesElement? = CartoesElement(id: String(Int.random(in: 1...1000)), nome: self.nameTextField.text ?? "", data: self.dateTextField.text ?? "", numero: self.numberCardTextField.text ?? "", bandeira: Flag.loadFlag(index: self.flagSegmented.selectedSegmentIndex).rawValue)
-        
-        return card
-    }
-    
-     
     
     private func checkFields() -> Bool {
         
@@ -229,4 +227,33 @@ extension AddCreditCardVC: UITextFieldDelegate {
         
         return true
     }
+}
+
+
+extension AddCreditCardVC: UIPickerViewDelegate, UIPickerViewDataSource {
+   
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if component == DateEnum.month.rawValue {
+            return self.months.count
+         }
+     
+        return self.years.count
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if component == 0{
+            return months[row]
+            
+         } else {
+            return  years[row]
+         }
+    }
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23502A82568955E0065D4A5 /* AddCreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23502A72568955E0065D4A5 /* AddCreditCardController.swift */; };
 		B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */; };
 		B238C203254A46F9001AEBD6 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = B238C202254A46F8001AEBD6 /* invoice.json */; };
 		B238C206254A4711001AEBD6 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C205254A4711001AEBD6 /* Invoice.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B23502A72568955E0065D4A5 /* AddCreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardController.swift; sourceTree = "<group>"; };
 		B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceVC.swift; sourceTree = "<group>"; };
 		B238C202254A46F8001AEBD6 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
 		B238C205254A4711001AEBD6 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				B29AE234255C9FEE00F01D85 /* AddCreditCardVC.swift */,
+				B23502A72568955E0065D4A5 /* AddCreditCardController.swift */,
 			);
 			path = AddCreditCardVC;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */,
 				B26E321E254391370093CACA /* SceneDelegate.swift in Sources */,
 				B264772D2547910E00EBED3B /* Cartoes.swift in Sources */,
+				B23502A82568955E0065D4A5 /* AddCreditCardController.swift in Sources */,
 				B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */,
 				B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */,
 				B238C206254A4711001AEBD6 /* Invoice.swift in Sources */,
@@ -348,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -403,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
