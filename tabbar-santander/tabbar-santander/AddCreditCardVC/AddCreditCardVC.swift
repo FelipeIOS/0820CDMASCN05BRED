@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 enum DateEnum: Int {
     case month = 0
     case year = 1
@@ -20,6 +19,15 @@ protocol AddCreditCardVCDelegte: class {
 
 class AddCreditCardVC: UIViewController {
 
+    
+    
+    //MARK:  Properties
+    
+    var mes: String?
+    var ano: String?
+    
+    var loadingView: LoadingView? = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? LoadingView
+    
     weak var delegate: AddCreditCardVCDelegte?
    
     @IBOutlet weak var nameTextField: UITextField!
@@ -40,6 +48,9 @@ class AddCreditCardVC: UIViewController {
     private var months: [String] = Calendar.current.monthSymbols
     private var years: [String] = []
     
+    
+    //MARK:  ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,8 +59,17 @@ class AddCreditCardVC: UIViewController {
         self.configDateView()
     
         self.loadYears()
+        
+        self.loadingView?.frame = self.view.frame
+        self.view.addSubview(self.loadingView ?? UIView())
+        self.loadingView?.showLoading()
+    
         // Do any additional setup after loading the view.
     }
+    
+    //MARK: Private func
+    
+
     
     private func loadYears() {
        
@@ -64,6 +84,7 @@ class AddCreditCardVC: UIViewController {
         self.dateView = UIPickerView()
         
         self.dateView?.delegate = self
+        self.dateView?.dataSource = self
     
         self.dateView?.backgroundColor = UIColor.red
         self.dateView?.setValue(UIColor.white, forKeyPath: "textColor")
@@ -98,7 +119,13 @@ class AddCreditCardVC: UIViewController {
     }
     
     @objc private func doneClick() {
+
+
+        let monthSelected = self.dateView?.selectedRow(inComponent: 0) ?? 0
+        let yearSelected  = self.dateView?.selectedRow(inComponent: 1) ?? 0
         
+        
+        self.dateTextField.text =  "\(self.months[monthSelected] )/\(self.years[yearSelected])"
         self.dateTextField.resignFirstResponder()
     }
     
@@ -125,6 +152,38 @@ class AddCreditCardVC: UIViewController {
         self.numberCardTextField.layer.cornerRadius = 4
         self.dateTextField.layer.cornerRadius = 4
     }
+    
+    private func checkFields() -> Bool {
+        
+        if  self.nameTextField.text?.isEmpty ?? true {
+            return false
+        }else if self.numberCardTextField.text?.isEmpty ?? true {
+            return false
+        }else if self.dateTextField.text?.isEmpty ?? true {
+            return false
+        }else if self.flagSegmented.selectedSegmentIndex == -1 {
+            return false
+        }
+        
+        return true
+    }
+    
+
+    private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.sourceType = sourceType
+            
+            self.present(imagePickerController, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    //MARK: Actions
     
     @IBAction func tappedSelectFlagSegmented(_ sender: UISegmentedControl) {
     }
@@ -164,38 +223,12 @@ class AddCreditCardVC: UIViewController {
         }
     }
     
-    private func checkFields() -> Bool {
-        
-        if  self.nameTextField.text?.isEmpty ?? true {
-            return false
-        }else if self.numberCardTextField.text?.isEmpty ?? true {
-            return false
-        }else if self.dateTextField.text?.isEmpty ?? true {
-            return false
-        }else if self.flagSegmented.selectedSegmentIndex == -1 {
-            return false
-        }
-        
-        return true
-    }
-    
-
-    private func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
-        
-        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
-            
-            let imagePickerController = UIImagePickerController()
-            imagePickerController.delegate = self
-            imagePickerController.sourceType = sourceType
-            
-            self.present(imagePickerController, animated: true, completion: nil)
-            
-        }
-        
-    }
+   
     
     
 }
+
+//MARK: UIImagePickerControllerDelegate UINavigationControllerDelegate
 
 extension AddCreditCardVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -210,6 +243,8 @@ extension AddCreditCardVC: UIImagePickerControllerDelegate, UINavigationControll
         
     }
 }
+
+//MARK: UITextFieldDelegate
 
 extension AddCreditCardVC: UITextFieldDelegate {
     
@@ -229,6 +264,7 @@ extension AddCreditCardVC: UITextFieldDelegate {
     }
 }
 
+//MARK: UIPickerViewDelegate UIPickerViewDataSource
 
 extension AddCreditCardVC: UIPickerViewDelegate, UIPickerViewDataSource {
    
@@ -248,11 +284,23 @@ extension AddCreditCardVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        if component == 0{
+        if component == DateEnum.month.rawValue {
             return months[row]
             
          } else {
             return  years[row]
+         }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+       
+        if component == DateEnum.month.rawValue {
+            self.mes = self.months[row]
+            print(months[row])
+
+         } else {
+            self.ano = self.years[row]
+            print(years[row])
          }
     }
     

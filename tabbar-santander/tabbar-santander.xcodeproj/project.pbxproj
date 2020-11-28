@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33EFBE3ED44F194943941E3F /* Pods_tabbar_santander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */; };
 		B23502A82568955E0065D4A5 /* AddCreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23502A72568955E0065D4A5 /* AddCreditCardController.swift */; };
 		B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */; };
 		B238C203254A46F9001AEBD6 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = B238C202254A46F8001AEBD6 /* invoice.json */; };
@@ -28,6 +29,10 @@
 		B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B26E323625439EF00093CACA /* ExtratoCell.xib */; };
 		B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323B2543A47E0093CACA /* Movimentacao.swift */; };
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
+		B28FEA8E256F2E00001306F1 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = B28FEA8D256F2E00001306F1 /* loading.json */; };
+		B28FEA92256F3621001306F1 /* loading2.json in Resources */ = {isa = PBXBuildFile; fileRef = B28FEA91256F3620001306F1 /* loading2.json */; };
+		B28FEA96256F3A95001306F1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FEA95256F3A95001306F1 /* LoadingView.swift */; };
+		B28FEA9B256F3AAF001306F1 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28FEA9A256F3AAF001306F1 /* LoadingView.xib */; };
 		B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */; };
 		B29AE226255A06AA00F01D85 /* ButtonCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */; };
 		B29AE232255C9F0600F01D85 /* AddCreditCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */; };
@@ -38,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tabbar_santander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A985F4BF1C839CD02A718FF /* Pods-tabbar-santander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbar-santander.release.xcconfig"; path = "Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander.release.xcconfig"; sourceTree = "<group>"; };
+		6858B30A71EB311E170CD740 /* Pods-tabbar-santander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbar-santander.debug.xcconfig"; path = "Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander.debug.xcconfig"; sourceTree = "<group>"; };
 		B23502A72568955E0065D4A5 /* AddCreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardController.swift; sourceTree = "<group>"; };
 		B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceVC.swift; sourceTree = "<group>"; };
 		B238C202254A46F8001AEBD6 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
@@ -61,6 +69,10 @@
 		B26E323625439EF00093CACA /* ExtratoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtratoCell.xib; sourceTree = "<group>"; };
 		B26E323B2543A47E0093CACA /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
+		B28FEA8D256F2E00001306F1 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		B28FEA91256F3620001306F1 /* loading2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading2.json; sourceTree = "<group>"; };
+		B28FEA95256F3A95001306F1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B28FEA9A256F3AAF001306F1 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCollectionCell.swift; sourceTree = "<group>"; };
 		B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCollectionCell.xib; sourceTree = "<group>"; };
 		B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCreditCard.storyboard; sourceTree = "<group>"; };
@@ -75,12 +87,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EFBE3ED44F194943941E3F /* Pods_tabbar_santander.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79E3B8C263F7C3BD6F37F1B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		803C359362E84AA043313B8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6858B30A71EB311E170CD740 /* Pods-tabbar-santander.debug.xcconfig */,
+				2A985F4BF1C839CD02A718FF /* Pods-tabbar-santander.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B238C1FC254A3B39001AEBD6 /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +149,8 @@
 			children = (
 				B26E321A254391370093CACA /* tabbar-santander */,
 				B26E3219254391370093CACA /* Products */,
+				803C359362E84AA043313B8A /* Pods */,
+				79E3B8C263F7C3BD6F37F1B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +178,8 @@
 				B26E32242543913A0093CACA /* Assets.xcassets */,
 				B26E32262543913A0093CACA /* LaunchScreen.storyboard */,
 				B26E32292543913A0093CACA /* Info.plist */,
+				B28FEA8D256F2E00001306F1 /* loading.json */,
+				B28FEA91256F3620001306F1 /* loading2.json */,
 			);
 			path = "tabbar-santander";
 			sourceTree = "<group>";
@@ -163,9 +197,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B28FEA94256F39D1001306F1 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				B28FEA95256F3A95001306F1 /* LoadingView.swift */,
+				B28FEA9A256F3AAF001306F1 /* LoadingView.xib */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		B29AE222255A03B200F01D85 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B28FEA94256F39D1001306F1 /* Loading */,
 				B29AE223255A06AA00F01D85 /* ButtonCollectionCell.swift */,
 				B29AE224255A06AA00F01D85 /* ButtonCollectionCell.xib */,
 			);
@@ -188,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B26E322C2543913A0093CACA /* Build configuration list for PBXNativeTarget "tabbar-santander" */;
 			buildPhases = (
+				6A0C7B5A3F421D231BAA455A /* [CP] Check Pods Manifest.lock */,
 				B26E3214254391370093CACA /* Sources */,
 				B26E3215254391370093CACA /* Frameworks */,
 				B26E3216254391370093CACA /* Resources */,
+				3167A2AABEA89FF6F2C6465F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,16 +289,61 @@
 				B26E32282543913A0093CACA /* LaunchScreen.storyboard in Resources */,
 				B26E32252543913A0093CACA /* Assets.xcassets in Resources */,
 				B26477222547864F00EBED3B /* CreditCardContainerCell.xib in Resources */,
+				B28FEA92256F3621001306F1 /* loading2.json in Resources */,
 				B26E3223254391370093CACA /* Main.storyboard in Resources */,
 				B26477252547878600EBED3B /* cartoes.json in Resources */,
+				B28FEA8E256F2E00001306F1 /* loading.json in Resources */,
 				B29AE232255C9F0600F01D85 /* AddCreditCard.storyboard in Resources */,
 				B26E323825439EF00093CACA /* ExtratoCell.xib in Resources */,
+				B28FEA9B256F3AAF001306F1 /* LoadingView.xib in Resources */,
 				B264772A25478BF900EBED3B /* CreditCardCollectionCell.xib in Resources */,
 				B26E32402543A7EB0093CACA /* despesas.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3167A2AABEA89FF6F2C6465F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A0C7B5A3F421D231BAA455A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tabbar-santander-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B26E3214254391370093CACA /* Sources */ = {
@@ -276,6 +367,7 @@
 				B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */,
 				B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */,
 				B238C206254A4711001AEBD6 /* Invoice.swift in Sources */,
+				B28FEA96256F3A95001306F1 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +511,7 @@
 		};
 		B26E322D2543913A0093CACA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6858B30A71EB311E170CD740 /* Pods-tabbar-santander.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +535,7 @@
 		};
 		B26E322E2543913A0093CACA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A985F4BF1C839CD02A718FF /* Pods-tabbar-santander.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
