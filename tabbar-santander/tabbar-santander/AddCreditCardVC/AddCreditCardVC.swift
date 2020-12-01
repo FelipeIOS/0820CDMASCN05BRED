@@ -17,7 +17,7 @@ protocol AddCreditCardVCDelegte: class {
     func success(value: CartoesElement?)
 }
 
-class AddCreditCardVC: UIViewController {
+class AddCreditCardVC: BaseViewController {
 
     
     
@@ -26,7 +26,6 @@ class AddCreditCardVC: UIViewController {
     var mes: String?
     var ano: String?
     
-    var loadingView: LoadingView? = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? LoadingView
     
     weak var delegate: AddCreditCardVCDelegte?
    
@@ -59,10 +58,8 @@ class AddCreditCardVC: UIViewController {
         self.configDateView()
     
         self.loadYears()
-        
-        self.loadingView?.frame = self.view.frame
-        self.view.addSubview(self.loadingView ?? UIView())
-        self.loadingView?.showLoading()
+    
+        self.showLoading()
     
         // Do any additional setup after loading the view.
     }
