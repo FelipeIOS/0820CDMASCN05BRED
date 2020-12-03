@@ -13,35 +13,30 @@ class InvoiceController {
     
     private var cardID: String?
     
-    init(cardListElement:CardListElement? = nil, cardID: String?) {
+    private var  worker: InvoiceWorker?
+    
+    init(cardID: String?) {
         
         self.cardID = cardID
-        self.cardListElement = cardListElement
+        self.cardListElement = CardListElement()
+        self.worker = InvoiceWorker()
     }
 
-    func loadCardListElement( completionHandler: (_ result: Bool, _ error: Error?) -> Void) {
-        
-        if let path = Bundle.main.path(forResource: "invoice", ofType: "json"){
+    func loadCardListElement( completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void) {
+    
+        self.worker?.getInvoice(cardID: self.cardID ?? "") { (cardListElement, error) in
             
-            do {
+            if let _cardListElement = cardListElement {
+                print(_cardListElement.cardID)
                 
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                
-                let cardList = try JSONDecoder().decode(CardList.self, from: data)
-                
-                print("=======>cardList\(cardList)")
-                
-                let list = cardList.cardList?.filter({$0.cardID == self.cardID ?? ""})
-                
-                self.cardListElement = list?.first
-                
+                self.cardListElement = _cardListElement
                 completionHandler(true, nil)
-            }catch{
-                print("Deu ruim no parse")
+            }else{
+                
                 completionHandler(false, error)
             }
-
         }
+
     }
     
     var numberOfRows: Int {

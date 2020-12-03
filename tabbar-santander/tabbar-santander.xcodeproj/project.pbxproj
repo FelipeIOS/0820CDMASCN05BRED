@@ -30,6 +30,7 @@
 		B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E323B2543A47E0093CACA /* Movimentacao.swift */; };
 		B26E32402543A7EB0093CACA /* despesas.json in Resources */ = {isa = PBXBuildFile; fileRef = B26E323F2543A7EB0093CACA /* despesas.json */; };
 		B27A082F2571D93700CD9907 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A082E2571D93700CD9907 /* BaseViewController.swift */; };
+		B27A08852578507C00CD9907 /* InvoiceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A08842578507B00CD9907 /* InvoiceWorker.swift */; };
 		B28FEA8E256F2E00001306F1 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = B28FEA8D256F2E00001306F1 /* loading.json */; };
 		B28FEA92256F3621001306F1 /* loading2.json in Resources */ = {isa = PBXBuildFile; fileRef = B28FEA91256F3620001306F1 /* loading2.json */; };
 		B28FEA96256F3A95001306F1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FEA95256F3A95001306F1 /* LoadingView.swift */; };
@@ -71,6 +72,7 @@
 		B26E323B2543A47E0093CACA /* Movimentacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimentacao.swift; sourceTree = "<group>"; };
 		B26E323F2543A7EB0093CACA /* despesas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = despesas.json; sourceTree = "<group>"; };
 		B27A082E2571D93700CD9907 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B27A08842578507B00CD9907 /* InvoiceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceWorker.swift; sourceTree = "<group>"; };
 		B28FEA8D256F2E00001306F1 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		B28FEA91256F3620001306F1 /* loading2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading2.json; sourceTree = "<group>"; };
 		B28FEA95256F3A95001306F1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		B26E321A254391370093CACA /* tabbar-santander */ = {
 			isa = PBXGroup;
 			children = (
+				B27A08832578500400CD9907 /* Network */,
 				B27A082E2571D93700CD9907 /* BaseViewController.swift */,
 				B29AE237255C9FF500F01D85 /* AddCreditCardVC */,
 				B29AE222255A03B200F01D85 /* CustomViews */,
@@ -198,6 +201,14 @@
 				B238C205254A4711001AEBD6 /* Invoice.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B27A08832578500400CD9907 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B27A08842578507B00CD9907 /* InvoiceWorker.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B28FEA94256F39D1001306F1 /* Loading */ = {
@@ -362,6 +373,7 @@
 				B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */,
 				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
 				B29AE235255C9FEE00F01D85 /* AddCreditCardVC.swift in Sources */,
+				B27A08852578507C00CD9907 /* InvoiceWorker.swift in Sources */,
 				B26E321C254391370093CACA /* AppDelegate.swift in Sources */,
 				B26E3231254395EC0093CACA /* AccountBalanceVC.swift in Sources */,
 				B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */,
