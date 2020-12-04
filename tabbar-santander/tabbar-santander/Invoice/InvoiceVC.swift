@@ -37,8 +37,12 @@ class InvoiceVC: BaseViewController {
                 }
                 
             }else{
-                print("deu error: \(error)")
-                self.hiddenLoading()
+                
+                DispatchQueue.main.async {
+                    print("deu error: \(error)")
+                    self.hiddenLoading()
+                }
+               
             }
         })
     }

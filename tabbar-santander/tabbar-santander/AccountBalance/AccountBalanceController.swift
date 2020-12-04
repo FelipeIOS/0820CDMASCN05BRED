@@ -11,6 +11,7 @@ class AccountBalanceController {
     
     private var arrayLancamentos:[LancamentoElement] = []
     private var currentLancamentoElement: LancamentoElement?
+    private var worker: DespesasWorker = DespesasWorker()
     
     func loadCurrentLancamentoElement(index: Int) {
         self.currentLancamentoElement = arrayLancamentos[index]
@@ -21,25 +22,16 @@ class AccountBalanceController {
         
     }
 
-    func loadLancamentos(completionHandler: (_ result: Bool,  _ error: Error?) -> Void) {
+    func loadLancamentos( completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void) {
+
+        self.worker.getLancamentos { (success, error) in
         
-        if let path = Bundle.main.path(forResource: "despesas", ofType: "json"){
-            
-            do {
+            if let _success = success {
                 
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                
-                let movimentacao = try JSONDecoder().decode(Movimentacao.self, from: data)
-                
-                print("=======>movimentacao\(movimentacao)")
-                
-                self.arrayLancamentos =  movimentacao.lancamentos
-                
-                completionHandler(true, nil)
-                
-            }catch{
-                completionHandler(false, error)
-                print("Deu ruim no parse")
+                self.arrayLancamentos = _success
+                completionHandler(true,nil)
+            }else{
+                completionHandler(false,error)
             }
         }
     }
