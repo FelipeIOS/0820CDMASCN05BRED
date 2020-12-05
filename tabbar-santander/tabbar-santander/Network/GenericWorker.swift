@@ -11,5 +11,4 @@ import Foundation
 class GenericWorker {
 
     typealias completion <T> = (_ result: T, _ failure: String?) -> Void
-    
 }

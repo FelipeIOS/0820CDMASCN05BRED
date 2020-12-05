@@ -13,6 +13,7 @@ class DespesasWorker: GenericWorker {
     func getDespesas(completion: @escaping completion<Movimentacao?>){
         
         let session: URLSession = URLSession.shared
+    
         
         let url: URL? = URL(string: "api.mocki.io/v1/3f3b9a9d")
         
@@ -32,7 +33,6 @@ class DespesasWorker: GenericWorker {
             
         }
     }
-    
     
     func getLancamentos(completion: @escaping completion<[LancamentoElement]?>){
         

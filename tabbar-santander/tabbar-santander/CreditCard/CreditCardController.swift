@@ -13,23 +13,16 @@ class CreditCardController {
     
     private var isReloadCollection: Bool = false
     
-    func loadCreditCard(completionHandler: (_ result: Bool,  _ error: Error?) -> Void) {
+    func loadCreditCard(completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void)  {
         
-        if let path = Bundle.main.path(forResource: "cartoes", ofType: "json"){
-            
-            do {
+        CartoesWorker().getCartoes { (success, error) in
+        
+            if let _success = success {
                 
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                
-                let cartoes = try JSONDecoder().decode(Cartoes.self, from: data)
-                
-                print("=======>cartoes\(cartoes)")
-                self.cartoes = cartoes
+                self.cartoes = _success
                 completionHandler(true, nil)
-                
-            }catch{
-                print("Deu ruim no parse")
-                completionHandler(false, error)
+            }else{
+                completionHandler(false,error)
             }
         }
     }

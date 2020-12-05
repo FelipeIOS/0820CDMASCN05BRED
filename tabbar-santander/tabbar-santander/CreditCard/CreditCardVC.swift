@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CreditCardVC: UIViewController {
+class CreditCardVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,14 +18,23 @@ class CreditCardVC: UIViewController {
         
         self.tableView.register(UINib(nibName: "CreditCardContainerCell", bundle: nil), forCellReuseIdentifier: "CreditCardContainerCell")
         
-        
+        self.showLoading()
         self.controller.loadCreditCard { (result, error) in
             
             if result {
-                self.tableView.delegate = self
-                self.tableView.dataSource = self
-                self.tableView.tableFooterView = UIView()
+                
+                DispatchQueue.main.async {
+                    self.tableView.delegate = self
+                    self.tableView.dataSource = self
+                    self.tableView.tableFooterView = UIView()
+                    self.tableView.reloadData()
+                    self.hiddenLoading()
+                }
+     
             }else{
+                DispatchQueue.main.async {
+                    self.hiddenLoading()
+                }
                 print("deu error: \(error)")
             }
         }
