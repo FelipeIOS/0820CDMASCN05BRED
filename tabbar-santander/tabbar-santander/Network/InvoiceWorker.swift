@@ -6,40 +6,51 @@
 //
 
 import Foundation
+import Alamofire
+
+
 
 
 class InvoiceWorker: GenericWorker {
     
     func getInvoice(cardID: String, completion: @escaping completion<CardListElement?>) {
         
-        let session: URLSession = URLSession.shared
         
-        let url: URL? = URL(string: "http://www.amock.io/api/v2/invoice")
+        let url: URL? = URL(string: "https://gist.githubusercontent.com/ooredroxoo/a474fc39a8c3c209daf29b95dd1fad3b/raw/2644152eed972bd1e8f347e487744d5538a4ddf2/invoices.json")
         
         if let _url = url {
             
-            let task: URLSessionTask = session.dataTask(with: _url) { (data, response, error) in
-        
-                do {
-                    let cardList = try JSONDecoder().decode(CardList.self, from: data ?? Data())
+            var urlRequest = URLRequest(url: _url)
+            urlRequest.httpMethod = Method.get.rawValue
+            
+            AF.request(urlRequest).responseJSON { (response) in
+                
+                print(response.response)
+                
+                if response.response?.statusCode == 200 {
                     
-                    if let _cardList = cardList.cardList {
-                    
-                        let cardLisElement = _cardList.filter({$0.cardID == cardID })
+                    do {
+                        let cardList = try JSONDecoder().decode(CardList.self, from: response.data ?? Data())
                         
-                        completion(cardLisElement.first, nil)
-                    }else{
-                        completion(nil, "Deu ruim")
+                        if let _cardList = cardList.cardList {
+                            
+                            let cardLisElement = _cardList.filter({$0.cardID == cardID })
+                            
+                            completion(cardLisElement.first, nil)
+                        }else{
+                            completion(nil, "Deu ruim")
+                        }
+                        
+                    }catch {
+                        completion(nil,"deu ruim no catch")
+                        print(error)
                     }
                     
-                }catch {
-                    completion(nil,"deu ruim no catch")
-                    print(error)
                 }
             }
             
-            task.resume()
         }
+        
     }
     
     
@@ -52,7 +63,7 @@ class InvoiceWorker: GenericWorker {
         if let _url = url {
             
             let task: URLSessionTask = session.dataTask(with: _url) { (data, response, error) in
-        
+                
                 do {
                     let cardList = try JSONDecoder().decode(CardList.self, from: data ?? Data())
                     
@@ -72,26 +83,26 @@ class InvoiceWorker: GenericWorker {
     func getInvoiceMock(cardID: String, completion: @escaping completion<CardListElement?>) {
         
         if let path = Bundle.main.path(forResource: "invoice", ofType: "json"){
-
+            
             do {
-
+                
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-
+                
                 let cardList = try JSONDecoder().decode(CardList.self, from: data)
-
+                
                 print("=======>cardList\(cardList)")
-
+                
                 let list = cardList.cardList?.filter({$0.cardID == cardID})
-
+                
                 let cardListElement = list?.first
-
+                
                 completion(cardListElement, nil)
             }catch{
                 print("Deu ruim no parse")
                 completion(nil, "deu ruim")
             }
-
+            
         }
     }
-
+    
 }
