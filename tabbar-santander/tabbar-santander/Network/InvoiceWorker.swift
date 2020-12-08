@@ -38,11 +38,12 @@ class InvoiceWorker: GenericWorker {
                             
                             completion(cardLisElement.first, nil)
                         }else{
-                            completion(nil, "Deu ruim")
+                            completion(nil, ErrorHandler(title: "Error", description: response.error?.errorDescription, code: response.error?.responseCode))
                         }
                         
                     }catch {
-                        completion(nil,"deu ruim no catch")
+                        
+                        completion(nil, ErrorHandler(title: "Error", description: error.localizedDescription,code:nil))
                         print(error)
                     }
                     
@@ -70,7 +71,7 @@ class InvoiceWorker: GenericWorker {
                     completion(cardList, nil)
                     
                 }catch {
-                    completion(nil,"deu ruim no catch")
+                    completion(nil, ErrorHandler(title: "Error", description: error.localizedDescription,code:nil))
                     print(error)
                 }
             }
@@ -99,7 +100,7 @@ class InvoiceWorker: GenericWorker {
                 completion(cardListElement, nil)
             }catch{
                 print("Deu ruim no parse")
-                completion(nil, "deu ruim")
+                completion(nil, ErrorHandler(title: "Error", description: error.localizedDescription,code:nil))
             }
             
         }

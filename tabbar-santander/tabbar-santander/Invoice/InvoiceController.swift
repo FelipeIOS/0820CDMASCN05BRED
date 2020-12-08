@@ -33,7 +33,7 @@ class InvoiceController {
                 completionHandler(true, nil)
             }else{
                 
-                completionHandler(false, error)
+                completionHandler(false, "")
             }
         }
 

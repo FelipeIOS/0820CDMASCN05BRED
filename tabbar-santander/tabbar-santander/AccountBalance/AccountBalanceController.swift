@@ -31,7 +31,7 @@ class AccountBalanceController {
                 self.arrayLancamentos = _success
                 completionHandler(true,nil)
             }else{
-                completionHandler(false,error)
+                completionHandler(false,"")
             }
         }
     }

@@ -25,7 +25,7 @@ class DespesasWorker: GenericWorker {
                     let despesas = try JSONDecoder().decode(Movimentacao.self , from: data ?? Data())
                     completion(despesas, nil)
                 }catch{
-                    completion(nil, "deu ruim")
+                    completion(nil, nil)
                 }
             }
             
@@ -48,7 +48,7 @@ class DespesasWorker: GenericWorker {
                     let despesas = try JSONDecoder().decode(Movimentacao.self , from: data ?? Data())
                     completion(despesas.lancamentos, nil)
                 }catch{
-                    completion(nil, "deu ruim")
+                    completion(nil, nil)
                 }
             }
             
