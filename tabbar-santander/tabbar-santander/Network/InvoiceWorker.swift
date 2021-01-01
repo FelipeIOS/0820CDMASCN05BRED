@@ -9,8 +9,6 @@ import Foundation
 import Alamofire
 
 
-
-
 class InvoiceWorker: GenericWorker {
     
     func getInvoice(cardID: String, completion: @escaping completion<CardListElement?>) {
@@ -47,6 +45,8 @@ class InvoiceWorker: GenericWorker {
                         print(error)
                     }
                     
+                }else{
+                    completion(nil, ErrorHandler(title: "Error", description: response.error?.errorDescription, code: response.error?.responseCode))
                 }
             }
             

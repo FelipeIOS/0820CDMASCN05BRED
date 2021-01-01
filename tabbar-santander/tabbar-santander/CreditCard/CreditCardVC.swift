@@ -33,6 +33,7 @@ class CreditCardVC: BaseViewController {
      
             }else{
                 DispatchQueue.main.async {
+                    self.showError(error: error, preferredStyle: .alert)
                     self.hiddenLoading()
                 }
                 print("deu error: \(error)")

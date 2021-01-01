@@ -22,7 +22,7 @@ class InvoiceController {
         self.worker = InvoiceWorker()
     }
 
-    func loadCardListElement( completionHandler: @escaping (_ result: Bool, _ error: String?) -> Void) {
+    func loadCardListElement( completionHandler: @escaping (_ result: Bool, _ error: ErrorHandler?) -> Void) {
     
         self.worker?.getInvoice(cardID: self.cardID ?? "") { (cardListElement, error) in
             
@@ -33,7 +33,7 @@ class InvoiceController {
                 completionHandler(true, nil)
             }else{
                 
-                completionHandler(false, "")
+                completionHandler(false, error)
             }
         }
 

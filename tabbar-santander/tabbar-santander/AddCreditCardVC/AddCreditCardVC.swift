@@ -59,7 +59,7 @@ class AddCreditCardVC: BaseViewController {
     
         self.loadYears()
     
-        self.showLoading()
+//        self.showLoading()
     
         // Do any additional setup after loading the view.
     }
