@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		33EFBE3ED44F194943941E3F /* Pods_tabbar_santander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */; };
+		B215BFD025ACD733009DC43E /* Locais.json in Resources */ = {isa = PBXBuildFile; fileRef = B215BFCF25ACD733009DC43E /* Locais.json */; };
+		B215BFD425ACD827009DC43E /* Locais.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215BFD325ACD827009DC43E /* Locais.swift */; };
+		B215BFDA25ACDAB1009DC43E /* LocaisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215BFD925ACDAB1009DC43E /* LocaisVC.swift */; };
 		B23502A82568955E0065D4A5 /* AddCreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23502A72568955E0065D4A5 /* AddCreditCardController.swift */; };
 		B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */; };
 		B238C203254A46F9001AEBD6 /* invoice.json in Resources */ = {isa = PBXBuildFile; fileRef = B238C202254A46F8001AEBD6 /* invoice.json */; };
@@ -52,6 +55,9 @@
 		17F919520EB32845EF480E14 /* Pods_tabbar_santander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tabbar_santander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A985F4BF1C839CD02A718FF /* Pods-tabbar-santander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbar-santander.release.xcconfig"; path = "Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander.release.xcconfig"; sourceTree = "<group>"; };
 		6858B30A71EB311E170CD740 /* Pods-tabbar-santander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbar-santander.debug.xcconfig"; path = "Target Support Files/Pods-tabbar-santander/Pods-tabbar-santander.debug.xcconfig"; sourceTree = "<group>"; };
+		B215BFCF25ACD733009DC43E /* Locais.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Locais.json; sourceTree = "<group>"; };
+		B215BFD325ACD827009DC43E /* Locais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locais.swift; sourceTree = "<group>"; };
+		B215BFD925ACDAB1009DC43E /* LocaisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaisVC.swift; sourceTree = "<group>"; };
 		B23502A72568955E0065D4A5 /* AddCreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardController.swift; sourceTree = "<group>"; };
 		B238C1FD254A3B97001AEBD6 /* InvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceVC.swift; sourceTree = "<group>"; };
 		B238C202254A46F8001AEBD6 /* invoice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invoice.json; sourceTree = "<group>"; };
@@ -123,6 +129,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B215BFD825ACDA66009DC43E /* Locais */ = {
+			isa = PBXGroup;
+			children = (
+				B215BFD925ACDAB1009DC43E /* LocaisVC.swift */,
+			);
+			path = Locais;
+			sourceTree = "<group>";
+		};
 		B238C1FC254A3B39001AEBD6 /* Invoice */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +191,7 @@
 		B26E321A254391370093CACA /* tabbar-santander */ = {
 			isa = PBXGroup;
 			children = (
+				B215BFD825ACDA66009DC43E /* Locais */,
 				B27A08832578500400CD9907 /* Network */,
 				B27A082E2571D93700CD9907 /* BaseViewController.swift */,
 				B29AE237255C9FF500F01D85 /* AddCreditCardVC */,
@@ -201,12 +216,14 @@
 		B26E323A2543A46A0093CACA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B215BFCF25ACD733009DC43E /* Locais.json */,
 				B238C202254A46F8001AEBD6 /* invoice.json */,
 				B26E323F2543A7EB0093CACA /* despesas.json */,
 				B26477242547878600EBED3B /* cartoes.json */,
 				B26E323B2543A47E0093CACA /* Movimentacao.swift */,
 				B264772C2547910E00EBED3B /* Cartoes.swift */,
 				B238C205254A4711001AEBD6 /* Invoice.swift */,
+				B215BFD325ACD827009DC43E /* Locais.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +331,7 @@
 				B29AE226255A06AA00F01D85 /* ButtonCollectionCell.xib in Resources */,
 				B26E32282543913A0093CACA /* LaunchScreen.storyboard in Resources */,
 				B26E32252543913A0093CACA /* Assets.xcassets in Resources */,
+				B215BFD025ACD733009DC43E /* Locais.json in Resources */,
 				B26477222547864F00EBED3B /* CreditCardContainerCell.xib in Resources */,
 				B28FEA92256F3621001306F1 /* loading2.json in Resources */,
 				B26E3223254391370093CACA /* Main.storyboard in Resources */,
@@ -392,12 +410,14 @@
 				B26E321C254391370093CACA /* AppDelegate.swift in Sources */,
 				B26E3231254395EC0093CACA /* AccountBalanceVC.swift in Sources */,
 				B26E323C2543A47E0093CACA /* Movimentacao.swift in Sources */,
+				B215BFD425ACD827009DC43E /* Locais.swift in Sources */,
 				B26E321E254391370093CACA /* SceneDelegate.swift in Sources */,
 				B264772D2547910E00EBED3B /* Cartoes.swift in Sources */,
 				B23502A82568955E0065D4A5 /* AddCreditCardController.swift in Sources */,
 				B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */,
 				B29AE225255A06AA00F01D85 /* ButtonCollectionCell.swift in Sources */,
 				B2CF27D2257F08C100EA08C1 /* ErrorHandler.swift in Sources */,
+				B215BFDA25ACDAB1009DC43E /* LocaisVC.swift in Sources */,
 				B238C206254A4711001AEBD6 /* Invoice.swift in Sources */,
 				B28FEA96256F3A95001306F1 /* LoadingView.swift in Sources */,
 			);
