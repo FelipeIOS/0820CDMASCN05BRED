@@ -172,11 +172,25 @@
                     <view key="view" contentMode="scaleToFill" id="76y-eY-EUO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KDN-vS-B52">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vOM-18-PZh"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vOM-18-PZh" firstAttribute="trailing" secondItem="KDN-vS-B52" secondAttribute="trailing" id="2B3-ax-thy"/>
+                            <constraint firstItem="vOM-18-PZh" firstAttribute="bottom" secondItem="KDN-vS-B52" secondAttribute="bottom" id="eac-mB-XZt"/>
+                            <constraint firstItem="KDN-vS-B52" firstAttribute="top" secondItem="vOM-18-PZh" secondAttribute="top" id="gvn-b8-T2d"/>
+                            <constraint firstItem="KDN-vS-B52" firstAttribute="leading" secondItem="vOM-18-PZh" secondAttribute="leading" id="zD5-6E-xGd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Agencias" image="mappin.and.ellipse" catalog="system" id="KB0-Ws-qiX"/>
                     <navigationItem key="navigationItem" id="Qpg-oG-iE5"/>
+                    <connections>
+                        <outlet property="myMapView" destination="KDN-vS-B52" id="u4D-65-nT3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trC-lb-lPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
