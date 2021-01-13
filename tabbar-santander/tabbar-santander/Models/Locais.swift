@@ -2,6 +2,14 @@
 import Foundation
 import MapKit
 
+class Locais: Codable {
+    let agencias: [Agencia]
+
+    init(agencias: [Agencia]) {
+        self.agencias = agencias
+    }
+}
+
 class Agencia: NSObject, Codable, MKAnnotation {
     
     let title, subtitle, categoria: String?

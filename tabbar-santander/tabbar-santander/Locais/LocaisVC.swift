@@ -19,16 +19,16 @@ class LocaisVC: BaseViewController {
         let initialLocation = CLLocation(latitude: -23.565163997932217, longitude: -46.652365089520536)
         self.centerMapOnLocation(location: initialLocation)
         
-        
-       
-        
-        
         let agencia: Agencia = Agencia(title: "Trianon", subtitle: "lugar turistico", categoria: "teste", lat: "-23.565163997932217", lng: "-46.652365089520536")
                                        
         self.myMapView.addAnnotation(agencia)
         
-       
         
+        if let locais = self.loadInitialData() {
+            
+            self.myMapView.addAnnotations(locais.agencias)
+        }
+    
         // Do any additional setup after loading the view.
     }
     
@@ -51,8 +51,25 @@ class LocaisVC: BaseViewController {
         }else{
             locationManager.requestWhenInUseAuthorization()
         }
-
+    }
+    
+    func loadInitialData() -> Locais? {
         
+        if let path =  Bundle.main.path(forResource: "Locais", ofType: "json") {
+            
+            do {
+
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let local = try JSONDecoder().decode(Locais.self, from: data)
+                
+                return local
+                
+            }catch {
+                
+                
+            }
+        }
+        return nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,8 +77,6 @@ class LocaisVC: BaseViewController {
         
         self.checkLocationAuthorizationStatus()
     }
-
-
 }
 
 extension LocaisVC: CLLocationManagerDelegate {
