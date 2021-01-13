@@ -1,32 +1,29 @@
+[{
+ "title" : "Trianon Masp",
+ "subtitle": "Melhor museu da região da  Av Paulista",
+ "categoria": "Museu",
+ "lat": "-23.5614142,",
+ "lng": "-46.6558819"
+ },
 {
- "agencias":[{
-  "title" : "Ag 000",
-  "subtitle": "Melhor museu da região da  Av Paulista",
-  "categoria": "Museu",
-  "lat": "-23.5614142",
-  "lng": "-46.6558819"
-  },
- {
-     "title" : "Ag 001",
-     "subtitle": "Parque com muito verde na Av Paulista",
-     "categoria": "Parque",
-     "lat": "-23.5623276",
-     "lng": "-46.6573249"
- },
- {
-     "title" : "Ag 002",
-     "subtitle": "Melhor café da região da  Av Paulista, recomendado para quem tem bom gosto",
-     "categoria": "Cafeteria",
-     "lat": "-23.5658593",
-     "lng": "-46.6529462"
- },
- {
-     "title" : "Ag 003",
-     "subtitle": "Shopping chines com varios contrabandos",
-     "categoria": "Museu",
-     "lat": "-23.5655065",
-     "lng": "-46.650555"
- }
- ]
-}
+    "title" : "Parque Trianon",
+    "subtitle": "Parque com muito verde na Av Paulista",
+    "categoria": "Parque",
+    "lat": "-23.5623276",
+    "lng": "-46.6573249"
+},
+{
+    "title" : "Starbucks",
+    "subtitle": "Melhor café da região da  Av Paulista, recomendado para quem tem bom gosto",
+    "categoria": "Cafeteria",
+    "lat": "-23.5658593",
+    "lng": "-46.6529462"
+},
+{
+    "title" : "Top Center",
+    "subtitle": "Shopping chines com varios contrabandos",
+    "categoria": "Museu",
+    "lat": "-23.5655065",
+    "lng": "-46.650555"
+}]
 
