@@ -20,7 +20,8 @@ class LocaisVC: BaseViewController {
         self.centerMapOnLocation(location: initialLocation)
         
         let agencia: Agencia = Agencia(title: "Trianon", subtitle: "lugar turistico", categoria: "teste", lat: "-23.565163997932217", lng: "-46.652365089520536")
-                                       
+                     
+        self.myMapView.delegate = self
         self.myMapView.addAnnotation(agencia)
         
         
@@ -45,7 +46,7 @@ class LocaisVC: BaseViewController {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+        if CLLocationManager.authorizationStatus() ==  .authorizedWhenInUse {
             
             self.myMapView.showsUserLocation = true
         }else{
@@ -84,5 +85,48 @@ extension LocaisVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         self.checkLocationAuthorizationStatus()
+    }
+}
+
+extension LocaisVC: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        guard let annotation = annotation as? Agencia else {return nil}
+
+        let identifier = "marker"
+        let view: MKMarkerAnnotationView
+
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        }else{
+
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+//            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            
+            let mapsButton =  UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
+            mapsButton.setBackgroundImage(UIImage(named: "map-icon"), for: .normal)
+            view.rightCalloutAccessoryView = mapsButton
+            
+            let detailLabel = UILabel()
+            detailLabel.numberOfLines = 0
+            detailLabel.font.withSize(12)
+            detailLabel.text  = annotation.subtitle
+            view.detailCalloutAccessoryView = detailLabel
+            
+            
+        }
+
+        return view
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        print("\(view.annotation?.title) foi clicada")
     }
 }
