@@ -110,7 +110,7 @@ extension LocaisVC: MKMapViewDelegate {
             
             let mapsButton =  UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
             mapsButton.setBackgroundImage(UIImage(named: "map-icon"), for: .normal)
-            view.rightCalloutAccessoryView = mapsButton
+            view.leftCalloutAccessoryView = mapsButton
             
             let detailLabel = UILabel()
             detailLabel.numberOfLines = 0
@@ -124,9 +124,20 @@ extension LocaisVC: MKMapViewDelegate {
         return view
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc: DetailLocaisVC = segue.destination as? DetailLocaisVC,
+           let annotation: MKAnnotation = sender as? MKAnnotation {
+            
+            vc.annotationSelected = annotation
+        }
+    }
+    
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         print("\(view.annotation?.title) foi clicada")
+        
+        self.performSegue(withIdentifier: "DetailLocaisVC", sender: view.annotation)
     }
 }
