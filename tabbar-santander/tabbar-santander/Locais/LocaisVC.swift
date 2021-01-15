@@ -13,54 +13,141 @@ class LocaisVC: BaseViewController {
     @IBOutlet weak var myMapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
     
+//MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let initialLocation = CLLocation(latitude: -23.5654197, longitude: -46.6545216)
+        
+        let initialLocation = CLLocation(latitude: -23.565163997932217, longitude: -46.652365089520536)
         self.centerMapOnLocation(location: initialLocation)
         
-        let point = Agencia(title: "Trianon Masp", subtitle: "A melhor agencia do mundo", categoria: "AG", lat: "-23.5614142", lng: "-46.6558819")
+//        let agencia: Agencia = Agencia(title: "Trianon", subtitle: "lugar turistico", categoria: "teste", lat: "-23.565163997932217", lng: "-46.652365089520536")
+                     
+        self.myMapView.delegate = self
+//        self.myMapView.addAnnotation(agencia)
         
-        self.myMapView.addAnnotation(point)
         
+        if let locais = self.loadInitialData() {
+            
+            self.myMapView.addAnnotations(locais.agencias)
+        }
+    
         // Do any additional setup after loading the view.
     }
 
-
-    func centerMapOnLocation(location: CLLocation) {
-        
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        
-        self.myMapView.setRegion(coordinateRegion, animated: true)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.checkLocationAuthorizationSatatus()
-
+        
+        self.checkLocationAuthorizationStatus()
     }
     
+//MARK: Private Methods
+    private  func centerMapOnLocation(location: CLLocation) {
+        
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: self.regionRadius, longitudinalMeters: self.regionRadius)
+        self.myMapView.setRegion(coordinateRegion, animated: true)
+        
+    }
     
     let locationManager = CLLocationManager()
     
-    func checkLocationAuthorizationSatatus() {
-        
+    private func checkLocationAuthorizationStatus() {
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
         
         if CLLocationManager.authorizationStatus() ==  .authorizedWhenInUse {
+            
             self.myMapView.showsUserLocation = true
-        }else {
-            self.locationManager.requestWhenInUseAuthorization()
+        }else{
+            locationManager.requestWhenInUseAuthorization()
         }
-        
     }
+    
+    private func loadInitialData() -> Locais? {
+        
+        if let path =  Bundle.main.path(forResource: "Locais", ofType: "json") {
+            
+            do {
+
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let local = try JSONDecoder().decode(Locais.self, from: data)
+                
+                return local
+                
+            }catch {
+                
+                
+            }
+        }
+        return nil
+    }
+    
+
 }
 
 extension LocaisVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        print(locations.first)
-        self.checkLocationAuthorizationSatatus()
+        self.checkLocationAuthorizationStatus()
     }
+}
+
+
+// MARK: MKMapViewDelegate
+extension LocaisVC: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+
+        guard let annotation = annotation as? Agencia else {return nil}
+        
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+            
+        }else {
+            
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+//            view.rightCalloutAccessoryView = UIButton(type: .contactAdd)
+            
+            
+            let detailLabel = UILabel()
+            detailLabel.numberOfLines = 0
+            detailLabel.font = detailLabel.font.withSize(12)
+            detailLabel.text = annotation.subtitle
+            
+            view.detailCalloutAccessoryView = detailLabel
+            
+            
+            let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
+            button.setBackgroundImage(UIImage(named: "map-icon"), for: .normal)
+            view.rightCalloutAccessoryView = button
+            
+        }
+        
+        return view
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        
+        self.performSegue(withIdentifier: "DetailViewController", sender: view.annotation)
+        print("clicou no botao")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc: DetailViewController? = segue.destination as? DetailViewController
+        
+        if let _vc = vc, let _sender =  sender as? MKAnnotation {
+            
+                _vc.annotationSelected = _sender
+        }
+        
+    }
+
 }

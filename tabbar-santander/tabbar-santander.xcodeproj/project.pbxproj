@@ -21,6 +21,7 @@
 		B264772925478BF900EBED3B /* CreditCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264772725478BF900EBED3B /* CreditCardCollectionCell.swift */; };
 		B264772A25478BF900EBED3B /* CreditCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B264772825478BF900EBED3B /* CreditCardCollectionCell.xib */; };
 		B264772D2547910E00EBED3B /* Cartoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264772C2547910E00EBED3B /* Cartoes.swift */; };
+		B26D002325B11EFA00FE779B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D002225B11EFA00FE779B /* DetailViewController.swift */; };
 		B26E321C254391370093CACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E321B254391370093CACA /* AppDelegate.swift */; };
 		B26E321E254391370093CACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E321D254391370093CACA /* SceneDelegate.swift */; };
 		B26E3220254391370093CACA /* CreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26E321F254391370093CACA /* CreditCardVC.swift */; };
@@ -68,6 +69,7 @@
 		B264772725478BF900EBED3B /* CreditCardCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCollectionCell.swift; sourceTree = "<group>"; };
 		B264772825478BF900EBED3B /* CreditCardCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditCardCollectionCell.xib; sourceTree = "<group>"; };
 		B264772C2547910E00EBED3B /* Cartoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartoes.swift; sourceTree = "<group>"; };
+		B26D002225B11EFA00FE779B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B26E3218254391370093CACA /* tabbar-santander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabbar-santander.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26E321B254391370093CACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B26E321D254391370093CACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B215BFD925ACDAB1009DC43E /* LocaisVC.swift */,
+				B26D002225B11EFA00FE779B /* DetailViewController.swift */,
 			);
 			path = Locais;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				B27A082F2571D93700CD9907 /* BaseViewController.swift in Sources */,
 				B26E3220254391370093CACA /* CreditCardVC.swift in Sources */,
 				B27A088D257AF31600CD9907 /* DespesasWorker.swift in Sources */,
+				B26D002325B11EFA00FE779B /* DetailViewController.swift in Sources */,
 				B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */,
 				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
 				B29AE235255C9FEE00F01D85 /* AddCreditCardVC.swift in Sources */,

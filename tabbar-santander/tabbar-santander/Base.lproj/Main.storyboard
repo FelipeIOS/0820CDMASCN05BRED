@@ -114,6 +114,56 @@
             </objects>
             <point key="canvasLocation" x="3217" y="69"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="snl-2i-u9r">
+            <objects>
+                <viewController id="JMF-4S-0PX" customClass="DetailViewController" customModule="tabbar_santander" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yc8-h0-deB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Mp1-b0-J0v">
+                                <rect key="frame" x="20" y="100" width="374" height="115.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-Yj-7Q1">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng5-H6-fgE">
+                                        <rect key="frame" x="0.0" y="47.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02q-X0-fvb">
+                                        <rect key="frame" x="0.0" y="95" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B1a-EU-6JH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B1a-EU-6JH" firstAttribute="trailing" secondItem="Mp1-b0-J0v" secondAttribute="trailing" constant="20" id="EEZ-4A-zgs"/>
+                            <constraint firstItem="Mp1-b0-J0v" firstAttribute="leading" secondItem="B1a-EU-6JH" secondAttribute="leading" constant="20" id="b6d-d9-TiE"/>
+                            <constraint firstItem="Mp1-b0-J0v" firstAttribute="top" secondItem="B1a-EU-6JH" secondAttribute="top" constant="100" id="fEO-Tj-d47"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coordinationsLabel" destination="02q-X0-fvb" id="i53-N9-JG7"/>
+                        <outlet property="subtitleLAbel" destination="ng5-H6-fgE" id="qi4-Ah-Khs"/>
+                        <outlet property="titleLabel" destination="OU4-Yj-7Q1" id="gy8-iS-S4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Pt-XG-YSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3433" y="-615"/>
+        </scene>
         <!--AddCreditCard-->
         <scene sceneID="LbL-nT-PGR">
             <objects>
@@ -190,6 +240,7 @@
                     <navigationItem key="navigationItem" id="Qpg-oG-iE5"/>
                     <connections>
                         <outlet property="myMapView" destination="KDN-vS-B52" id="u4D-65-nT3"/>
+                        <segue destination="JMF-4S-0PX" kind="presentation" identifier="DetailViewController" id="OoU-7c-2Ws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trC-lb-lPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
