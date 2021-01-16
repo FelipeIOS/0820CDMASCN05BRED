@@ -22,11 +22,28 @@ class DetailLocaisVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleLabel.text  = annotationSelected?.title ?? ""
-        self.subtitleLabel.text = annotationSelected?.subtitle ?? ""
-        self.latLabel.text = "latitude: \(annotationSelected?.coordinate.latitude ?? 0)"
-        self.longLabel.text = "longitude: \(annotationSelected?.coordinate.longitude ?? 0)"
+        self.setup()
     }
     
+    private func setup() {
+        
+        if let _annotation = self.annotationSelected {
+            self.titleLabel.text  = _annotation.title ?? ""
+            self.subtitleLabel.text = _annotation.subtitle ?? ""
+            self.latLabel.text = "latitude: \(_annotation.coordinate.latitude)"
+            self.longLabel.text = "longitude: \(_annotation.coordinate.longitude)"
+            self.localImage.image = UIImage(named: (_annotation.title ?? "") ?? "")
+            
+            self.localImage.addBlueEffect(style: .extraLight)
+        }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 5) {
+            self.localImage.removeBlurEffect()
+        }
+    }
+    
 }

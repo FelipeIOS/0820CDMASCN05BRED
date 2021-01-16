@@ -46,6 +46,7 @@
 		B29AE232255C9F0600F01D85 /* AddCreditCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */; };
 		B29AE235255C9FEE00F01D85 /* AddCreditCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE234255C9FEE00F01D85 /* AddCreditCardVC.swift */; };
 		B2BBFE5425B24FBF00710142 /* DetailLocaisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BBFE5325B24FBF00710142 /* DetailLocaisVC.swift */; };
+		B2BBFE5825B2670F00710142 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BBFE5725B2670F00710142 /* UIView+extension.swift */; };
 		B2CF27D2257F08C100EA08C1 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CF27D1257F08C100EA08C1 /* ErrorHandler.swift */; };
 		B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */; };
 		B2F44E5625562AF300EE6086 /* CreditCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F44E5525562AF300EE6086 /* CreditCardController.swift */; };
@@ -96,6 +97,7 @@
 		B29AE231255C9F0600F01D85 /* AddCreditCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCreditCard.storyboard; sourceTree = "<group>"; };
 		B29AE234255C9FEE00F01D85 /* AddCreditCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCreditCardVC.swift; sourceTree = "<group>"; };
 		B2BBFE5325B24FBF00710142 /* DetailLocaisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocaisVC.swift; sourceTree = "<group>"; };
+		B2BBFE5725B2670F00710142 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		B2CF27D1257F08C100EA08C1 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		B2F44E3E2553872900EE6086 /* AccountBalanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceController.swift; sourceTree = "<group>"; };
 		B2F44E5525562AF300EE6086 /* CreditCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				B215BFD925ACDAB1009DC43E /* LocaisVC.swift */,
 				B2BBFE5325B24FBF00710142 /* DetailLocaisVC.swift */,
+				B2BBFE5725B2670F00710142 /* UIView+extension.swift */,
 			);
 			path = Locais;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				B26E3220254391370093CACA /* CreditCardVC.swift in Sources */,
 				B27A088D257AF31600CD9907 /* DespesasWorker.swift in Sources */,
 				B2F44E3F2553872900EE6086 /* AccountBalanceController.swift in Sources */,
+				B2BBFE5825B2670F00710142 /* UIView+extension.swift in Sources */,
 				B238C1FE254A3B97001AEBD6 /* InvoiceVC.swift in Sources */,
 				B29AE235255C9FEE00F01D85 /* AddCreditCardVC.swift in Sources */,
 				B27A08852578507C00CD9907 /* InvoiceWorker.swift in Sources */,
